@@ -380,10 +380,16 @@ class Api_pcs extends REST_Controller {
 
         $result = $this -> M_transaksi -> getTransaksiBulanIni();
 
+        $total = 0;
+        foreach ($result as $row) {
+            $total = $total + $row['total'];
+        }
+
         $data_json = array(
             "success" => true,
             "message" => "Data found",
             "data"  => array(
+                "total" => $total,
                 "transaksi" => $result
             )
         );
