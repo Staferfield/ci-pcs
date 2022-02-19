@@ -1,0 +1,927 @@
+{
+	"info": {
+		"_postman_id": "13e6318d-c198-4745-bdd3-db156d9d4fef",
+		"name": "CI-PCS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "log_admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "stevi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1226",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api_pcs/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api_pcs",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "get_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "Maya@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1111",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Maya",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "steph@amikom.ac.id",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Steph",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Produk",
+			"item": [
+				{
+					"name": "get_produk",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/produk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"produk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_produk",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "admin_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Laptop",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "400000",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/produk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"produk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put_produk",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "admin_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "VGA",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "5000000",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/produk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"produk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del_produk",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/produk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"produk"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Transaksi",
+			"item": [
+				{
+					"name": "get_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "admin_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "2000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "admin_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "10000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_transaksi_bulan_ini",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/transaksi_bulan_ini",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"transaksi_bulan_ini"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Item_Transaksi",
+			"item": [
+				{
+					"name": "get_item_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/item_transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"item_transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_item_transaksi_by_transaksi_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/item_transaksi_by_transaksi_id?transaksi_id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"item_transaksi_by_transaksi_id"
+							],
+							"query": [
+								{
+									"key": "transaksi_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_item_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "transaksi_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "produk_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "harga_saat_transaksi",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/item_transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"item_transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put_item_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "transaksi_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "produk_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "harga_saat_transaksi",
+									"value": "1000000",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/item_transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"item_transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del_item_transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/item_transaksi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"item_transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del_item_transaksi_by_transaksi_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "transaksi_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/web/ci-pcs/index.php/api_pcs/item_transaksi_by_transaksi_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"web",
+								"ci-pcs",
+								"index.php",
+								"api_pcs",
+								"item_transaksi_by_transaksi_id"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
